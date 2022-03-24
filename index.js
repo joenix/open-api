@@ -41,3 +41,6 @@ App.use(Page.routes()).use(Page.allowedMethods());
 App.listen(port, () =>
   console.log(`Mock Server running at: ` + `http://localhost:${port}/`.cyan)
 );
+
+// Exit Process
+process.exit();

@@ -9,9 +9,9 @@
     "mocks": "node index.js"
   },
   "dependencies": {
-    "console-color-mr": "^2.0.1",
-    "koa": "^2.7.0",
-    "koa-router": "^7.4.0",
+    "console-color-mr": "^2.0.2",
+    "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
     "mockjs": "^1.1.0"
   }
 }
