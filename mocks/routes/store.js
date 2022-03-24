@@ -1,3 +1,5 @@
+const store = require("./store.json");
+
 module.exports = [
   {
     id: "get-store", // id of the route
@@ -8,11 +10,7 @@ module.exports = [
         id: "success", // id of the variant
         response: {
           status: 200, // status to send
-          body: [
-            {
-              a: 1
-            }
-          ] // body to send
+          body: store // body to send
         }
       },
       {
