@@ -7,6 +7,9 @@ const fs = require("fs");
 // KOA
 const koa = require("koa");
 
+// Cors
+const cors = require("@koa/cors");
+
 // Router
 const router = require("koa-router");
 
@@ -21,6 +24,9 @@ const Page = new router();
 
 // Port
 const port = 3100;
+
+// Cors First
+app.use(cors());
 
 // All
 App.use(async ctx => {

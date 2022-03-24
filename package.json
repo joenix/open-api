@@ -9,6 +9,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@koa/cors": "^3.2.0",
     "console-color-mr": "^2.0.2",
     "koa": "^2.13.4",
     "koa-router": "^10.1.1",
