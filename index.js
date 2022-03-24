@@ -26,7 +26,7 @@ const Page = new router();
 const port = 3100;
 
 // Cors First
-app.use(cors());
+App.use(cors());
 
 // All
 App.use(async ctx => {
