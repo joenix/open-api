@@ -6,7 +6,7 @@
   "author": "joenix <joenix.com@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "mocks": "node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "console-color-mr": "^2.0.2",
