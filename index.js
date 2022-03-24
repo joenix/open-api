@@ -1,13 +1,43 @@
-var mockserver = require("mockserver-node");
+// Colour Console
+require("console-color-mr");
 
-mockserver.start_mockserver({
-  serverPort: 1080,
-  verbose: true,
-  trace: true
+// FS
+const fs = require("fs");
+
+// KOA
+const koa = require("koa");
+
+// Router
+const router = require("koa-router");
+
+// Mock
+const mock = require("mockjs");
+
+// App
+const App = new koa();
+
+// Page
+const Page = new router();
+
+// Port
+const port = 3100;
+
+// All
+App.use(async ctx => {
+  ctx.body = mock.mock(
+    JSON.parse(fs.readFileSync(`./mocks/${ctx.path}.json`, "utf8"))
+  );
 });
 
-// do something
+// Customize Route Demo
+Page.get("/simple", async ctx => {
+  ctx.body = JSON.stringify({ a: 1, b: 2, c: 3 });
+});
 
-// mockserver.stop_mockserver({
-//   serverPort: 1080
-// });
+// Use Middleware
+App.use(Page.routes()).use(Page.allowedMethods());
+
+// Listen Port
+App.listen(port, () =>
+  console.log(`Mock Server running at: ` + `http://localhost:${port}/`.cyan)
+);

@@ -1,6 +1,0 @@
-[
-  {
-    "id": "store",
-    "routesVariants": ["get-store:success", "get-store:error"]
-  }
-]

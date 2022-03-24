@@ -6,11 +6,12 @@
   "author": "joenix <joenix.com@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "mocks": "mocks-server"
+    "mocks": "node index.js"
   },
-  "devDependencies": {
-    "@mocks-server/main": "^2.6.2",
-    "mockserver-node": "^5.13.0",
-    "nock": "^13.2.4"
+  "dependencies": {
+    "console-color-mr": "^2.0.1",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "mockjs": "^1.1.0"
   }
 }
